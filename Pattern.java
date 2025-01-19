@@ -73,7 +73,172 @@ public class Pattern {
                 }
                 System.out.println();
             }
-    }    
+    }   
+    
+    public static void Floyds_Triangle_Pattern(int n){
+            int counter =1;
+            for(int i=1; i<=n; i++){
+                for(int j=1; j<=i; j++){
+                    System.out.print(counter + " ");
+                    counter++;
+                }
+                System.out.println();
+            }
+    }
+
+    public static void Zero_One_Tringangle_Pattern(int n){
+            for(int i=1; i<=n; i++){
+                for(int j=1; j<=i; j++){
+                    if((i+j)% 2 ==0){
+                        System.out.print("1");
+                    }
+                    else{
+                        System.out.print("0");
+                    }
+                }     
+                System.out.println("");         
+            }
+    }
+
+    public static void ButterFly_Pattern(int n){
+        //1st Half
+        for(int i=1; i<=n; i++){
+            //Star
+            for(int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+            //Spaces
+            for(int j=1; j<=2*(n-i); j++){
+                System.out.print(" ");
+            }
+            //Star
+            for(int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+         //2st Half
+         for(int i=n-1; i>=1; i--){
+            //Star
+            for(int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+            //Spaces
+            for(int j=1; j<=2*(n-i); j++){
+                System.out.print(" ");
+            }
+            //Star
+            for(int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+
+    public static void Solid_Rhombus_Pattern(int n){
+            for(int i=1; i<=n; i++){
+                //spaces
+                for(int j=1; j<=n-i; j++){
+                    System.out.print(" ");
+                }
+                //star
+                for(int j=1; j<=n; j++){
+                    System.out.print("*");
+                }
+                System.out.println();
+
+            }
+    }
+    public static void Hollow_Solid_Rhombus_Pattern(int n){
+        for(int i=1; i<=n; i++){
+            //spaces
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            //star
+            for(int j=1; j<=n; j++){
+            //logic of Hollow rec pattern
+            if(i==1|| i==n || j==1 || j==n){
+                System.out.print("*");
+            }
+            else{
+                System.out.print(" ");
+            }
+            }
+            System.out.println();
+
+        }
+}
+    public static void Diamond_Pattern(int n){
+
+        //normal diamond pattern
+        // for(int i=1; i<=n; i++){
+        //     //spaces
+        //     for(int j=1; j<=n-i; j++){
+        //         System.out.print(" ");
+        //     }
+        //     //star
+        //     for(int j=1; j<=i; j++){
+        //         System.out.print("* ");
+        //     }
+        //     //spaces
+        //     for(int j=1; j<=n-i; j++){
+        //         System.out.print(" ");
+        //     }
+        //     System.out.println("");
+        // }
+
+        // for(int i=n-1; i>=1; i--){
+        //     //spaces
+        //     for(int j=1; j<=n-i; j++){
+        //         System.out.print(" ");
+        //     }
+        //     //star
+        //     for(int j=1; j<=i; j++){
+        //         System.out.print("* ");
+        //     }
+        //     //spaces
+        //     for(int j=1; j<=n-i; j++){
+        //         System.out.print(" ");
+        //     }
+        //     System.out.println("");
+        // }
+        
+        //by shradda didi
+        for(int i=1; i<=n; i++){
+            //spaces
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            //star
+            for(int j=1; j<=(2*i)-1; j++){
+                System.out.print("*");
+            }
+            //spaces
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            System.out.println("");
+        }
+
+        for(int i=n-1; i>=1; i--){
+            //spaces
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            //star
+            for(int j=1; j<=(2*i)-1; j++){
+                System.out.print("*");
+            }
+            //spaces
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            System.out.println("");
+        }
+    }
+
     public static void main(String[] args) {
     //isstar(4);
     //reverse_star(4);
@@ -82,6 +247,12 @@ public class Pattern {
     //char_pattern(4);
     // Hollow_Rec_Pattern(4,5);
     //inverted_rotated_half_pyramid_num(5);
+    // Zero_One_Tringangle_Pattern(5);
+    // Floyds_Triangle_Pattern(5);
+    // ButterFly_Pattern(5);
+    // Solid_Rhombus_Pattern(4);
+    // Hollow_Solid_Rhombus_Pattern(4);
+    Diamond_Pattern(5);
     }
     
 }
